@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  university-app:
+    build:
+      context: .
+    container_name: university-app
+    depends_on:
+      - university-db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://university-db:5432/university
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=password
+    ports:
+      - 8081:8081
+  university-db:
+    image: postgres:latest
+    restart: always
+    container_name: my-university-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: university
+    ports:
+      - 5432:5432

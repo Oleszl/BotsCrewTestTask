@@ -1,0 +1,45 @@
+INSERT INTO lectors (first_name, last_name, salary, degree)
+VALUES ('Kevin', 'White', 88000, 'PROFESSOR'),
+       ('Frank', 'Evans', 65000, 'ASSISTANT'),
+       ('Karen', 'Clark', 72000, 'ASSOCIATE_PROFESSOR'),
+       ('William', 'Lee', 84000, 'PROFESSOR'),
+       ('Robert', 'Harris', 66000, 'ASSISTANT'),
+       ('Mary', 'Wilson', 75000, 'ASSOCIATE_PROFESSOR'),
+       ('Thomas', 'Hall', 90000, 'PROFESSOR'),
+       ('Sharon', 'Adams', 68000, 'ASSISTANT'),
+       ('Brian', 'Hernandez', 73000, 'ASSOCIATE_PROFESSOR'),
+       ('Margaret', 'Young', 86000, 'PROFESSOR'),
+       ('Andrew', 'Perez', 69000, 'ASSISTANT'),
+       ('Linda', 'Sanchez', 72000, 'ASSOCIATE_PROFESSOR'),
+       ('Mark', 'Martinez', 85000, 'PROFESSOR');
+
+INSERT INTO departments (name, head_of_department_id)
+VALUES ('Mathematics', 1),
+       ('Computer Science', 4),
+       ('Physics', 7),
+       ('History', 10),
+       ('Biology', 13),
+       ('Chemistry', 6),
+       ('Economics', 3),
+       ('Literature', 8),
+       ('Engineering', 9),
+       ('Psychology', 2);
+
+INSERT INTO lectors_departments (lector_id, department_id)
+VALUES   (1, 1),
+         (2, 1),
+         (3, 1),
+         (4, 2),
+         (7, 3),
+         (4, 10),
+         (5, 2),
+         (13, 5),
+         (6, 4),
+         (6, 6),
+         (7, 5),
+         (8, 6),
+         (8, 8),
+         (9, 7),
+         (9, 9),
+         (10, 8),
+         (10, 2);
